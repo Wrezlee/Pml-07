@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <Button
+        android:id="@+id/btnimg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:text="Image"
+        app:layout_constraintEnd_toStartOf="@id/btnpdf"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnpdf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PDF"
+        app:layout_constraintEnd_toStartOf="@id/btnword"
+        app:layout_constraintStart_toEndOf="@id/btnimg"
+        app:layout_constraintTop_toTopOf="@+id/btnimg" />
+
+    <Button
+        android:id="@+id/btnword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="WORD"
+        app:layout_constraintEnd_toStartOf="@id/btnvideo"
+        app:layout_constraintStart_toEndOf="@id/btnpdf"
+        app:layout_constraintTop_toTopOf="@+id/btnpdf" />
+
+    <Button
+        android:id="@+id/btnvideo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="VIDEO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnword"
+        app:layout_constraintTop_toTopOf="@+id/btnword" />
+
+    <TextView
+        android:id="@+id/txvSelectedFile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Belum ada file dipilih"
+        app:layout_constraintEnd_toEndOf="@+id/btnvideo"
+        app:layout_constraintStart_toStartOf="@+id/btnimg"
+        app:layout_constraintTop_toBottomOf="@id/btnimg" />
+
+    <Button
+        android:id="@+id/btnupload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="UPLOAD"
+        app:layout_constraintEnd_toEndOf="@+id/btnvideo"
+        app:layout_constraintStart_toStartOf="@+id/btnimg"
+        app:layout_constraintTop_toBottomOf="@id/txvSelectedFile" />
+
+    <ListView
+        android:id="@+id/lsvStorage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnupload" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
